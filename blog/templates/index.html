@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="container-fluid">
+    <h1 class="my-5 display-1 text-center">BLOGLAR</h1>
+    {% for blog in blogs %}
+        <div class="row my-5">
+        <div class="col-3">
+            <img src="images/{{ blog.image }}" class="img-fluid" alt="...">
+        </div>
+        <div class="col-9">
+            <div class="card">
+            <h5 class="card-header">{{ blog.title }}</h5>
+            <div class="card-body">
+            <h5 class="card-title">{{ blog.title }}</h5>
+            <p class="card-text">{{ blog.content|safe }}</p>
+            <a href="#" class="btn btn-primary">Detay</a>
+      </div>
+    </div>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

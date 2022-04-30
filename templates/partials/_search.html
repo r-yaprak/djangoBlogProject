@@ -1,0 +1,13 @@
+<label for="exampleDataList" class="form-label">Datalist example</label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+{% with vrb=sehirler %}
+    {{ vrb|slice:"2:3" }}
+{% endwith %}
+
+<datalist id="datalistOptions">
+    {% for sehir in sehirler %}
+        <option value="{{ sehir|title }}">
+        <p>{{ forloop.last }}</p>
+    {% endfor %}
+
+</datalist>

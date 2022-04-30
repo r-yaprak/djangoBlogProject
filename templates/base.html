@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+</head>
+<body>
+{% include 'partials/_ustmenu.html' %}
+{% block content %}{% endblock %}
+{% include 'partials/_search.html' with kelimeler="ramazan" %}
+
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+{% block js %}{% endblock %}
+</body>
+</html>
